@@ -39,13 +39,13 @@ class Binary
 			int high=ss.length-1;
 			while(low<=high)
 			{
-			int mid=low+high;
+			int mid=(low+high)/2;
 			if(ss[mid].equalsIgnoreCase(sd)==true)
 			{
 			System.out.println("The given word is found");
 			return;
 			}
-			else if(ss[mid].hashCode()>sd.hashCode())
+			else if(ss[mid].compareTo(sd)<0)
 			{
 			low=mid+1;
 			}
